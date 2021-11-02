@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WearableVariableItem : VariableItem<float>
+public class WearableVariableItem : VariableItem
 {
 	public WearableVariableItem(string itemName, string itemDescription, float itemDmg) :
 	base(itemName: itemName, itemDescription: itemDescription, itemVariable: itemDmg)

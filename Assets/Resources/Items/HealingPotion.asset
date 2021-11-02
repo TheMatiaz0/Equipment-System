@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Mikstura leczenia
   itemDescription: Leczy i leczy.
-  itemType: 0
+  itemType: 1

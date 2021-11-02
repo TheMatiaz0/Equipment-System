@@ -6,23 +6,14 @@ using UnityEngine;
 public class SceneItemObject : MonoBehaviour
 {
 	[SerializeField]
-	private ItemData itemData = null;
-
-
-	// needs improvement with UnityEditor:
-	[SerializeField]
-	[TextArea]
-	private string itemText = null;
-
-	[SerializeField]
-	private Vector2 itemNumericRange;
+	private SpecificItem itemData = null;
 
 
 	private void OnMouseDown()
 	{
 		if (InventoryManager.TryAddItem(GetItem(), 1))
 		{
-			Debug.Log($"Podniesiono przedmiot o nazwie {itemData.ItemName}!");
+			Debug.Log($"Podniesiono przedmiot o nazwie {itemData.Type.ItemName}!");
 			Destroy(this.gameObject);
 		}
 
@@ -36,19 +27,36 @@ public class SceneItemObject : MonoBehaviour
 
 	public Item GetItem()
 	{
-		switch (itemData.ItemType)
+
+
+		switch (itemData.Type.ItemType)
 		{
 			case ItemType.Drinkable:
-				return new DrinkableVariableItem(itemData.ItemName, itemData.ItemDescription, (int)Random.Range(itemNumericRange.x, itemNumericRange.y));
+				{
+					var item = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
+					return new DrinkableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, (int)Random.Range(item.x, item.y + 1));
+				}
+
 
 			case ItemType.Readable:
-				return new ReadableVariableItem(itemData.ItemName, itemData.ItemDescription, itemText);
+				{
+					var item = (string)((TextSpecificData)(itemData.Specific)).GetSpecificVariable();
+					return new ReadableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, item);
+				}
+
 
 			case ItemType.Weapon:
-				return new WeaponVariableItem(itemData.ItemName, itemData.ItemDescription, (int)Random.Range(itemNumericRange.x, itemNumericRange.y));
+				{
+					var item  = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
+					return new WeaponVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, (int)Random.Range(item.x, item.y + 1));
+				}
+
 
 			case ItemType.Wearable:
-				return new WearableVariableItem(itemData.ItemName, itemData.ItemDescription, (int)Random.Range(itemNumericRange.x, itemNumericRange.y));
+				{
+					var item  = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
+					return new WearableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, (int)Random.Range(item.x, item.y + 1));
+				}
 		}
 
 		return null;

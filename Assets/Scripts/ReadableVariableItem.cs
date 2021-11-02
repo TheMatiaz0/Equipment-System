@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReadableVariableItem : VariableItem<string>
+public class ReadableVariableItem : VariableItem
 {
 	public ReadableVariableItem(string itemName, string itemDescription, string text) : 
 		base(itemName: itemName, itemDescription: itemDescription, itemVariable: text)

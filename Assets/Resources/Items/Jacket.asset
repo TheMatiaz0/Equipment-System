@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: "P\u0142aszcz wiosenny"
   itemDescription: "Wiosna idzie, p\u0119dzi!"
-  itemType: 2
+  itemType: 3

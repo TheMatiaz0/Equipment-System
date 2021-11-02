@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrinkableVariableItem : VariableItem<int>
+public class DrinkableVariableItem : VariableItem
 {
 	public DrinkableVariableItem(string itemName, string itemDescription, int itemHpRegain) 
 		: base(itemName: itemName, itemDescription: itemDescription, itemVariable: itemHpRegain)

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public enum ItemType
 {
+	None,
 	Drinkable,
 	Weapon,
 	Wearable,
@@ -28,25 +29,4 @@ public class ItemData : ScriptableObject
 	public string ItemName => itemName;
 	public string ItemDescription => itemDescription;
 	public ItemType ItemType => itemType;
-
-
-	public Item GetItem()
-	{
-		switch (itemType)
-		{
-			case ItemType.Drinkable:
-				return new DrinkableVariableItem(itemName, itemDescription, UnityEngine.Random.Range(5, 25));
-
-			case ItemType.Readable:
-				throw new NotImplementedException();
-
-			case ItemType.Weapon:
-				return new WeaponVariableItem(itemName, itemDescription, 3);
-
-			case ItemType.Wearable:
-				throw new NotImplementedException();
-		}
-
-		return null;
-	}
 }

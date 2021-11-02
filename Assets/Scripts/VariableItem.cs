@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class VariableItem<T> : Item
+public abstract class VariableItem : Item
 {
-	public T ItemVariable { get; protected set; }
-	public VariableItem(string itemName, string itemDescription, T itemVariable) : base(itemName: itemName, itemDescription: itemDescription)
+	public object ItemVariable { get; protected set; }
+	public VariableItem(string itemName, string itemDescription, object itemVariable) : base(itemName: itemName, itemDescription: itemDescription)
 	{
 		ItemVariable = itemVariable;
 	}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponVariableItem : VariableItem<float>
+public class WeaponVariableItem : VariableItem
 {
 	public WeaponVariableItem(string itemName, string itemDescription, float itemDmg) : 
 		base(itemName: itemName, itemDescription: itemDescription, itemVariable: itemDmg)
