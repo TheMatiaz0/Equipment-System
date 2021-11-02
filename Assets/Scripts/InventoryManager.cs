@@ -3,28 +3,30 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public static class InventoryManager
 {
-	public static InventoryManager Current { get; private set; }
+	public const int MaxItemsQuantity = 6;
 
-	protected void Awake()
-	{
-		Current = this;
-		PickedItems = new List<Item>();
-	}
-
-	public List<Item> PickedItems { get; private set; }
+	public static List<Item> PickedItems { get; private set; } = new List<Item>();
 	
-	public void AddItem(Item item)
+	public static bool TryAddItem(Item item)
 	{
+		if (PickedItems.Count >= MaxItemsQuantity)
+		{
+			return false;
+		}
+
 		PickedItems.Add(item);
+		return true;
 	}
 	
-	public void RemoveItem(Item item)
+	public static void RemoveItem(Item item)
 	{
 		PickedItems.Remove(item);
 	}
 
+
+	/*
 	public override string ToString()
 	{
 		StringBuilder stringBld = new StringBuilder();
@@ -38,4 +40,5 @@ public class InventoryManager : MonoBehaviour
 
 		return stringBld.ToString();
 	}
+	*/
 }

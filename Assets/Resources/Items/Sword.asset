@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   itemName: "Miecz krzy\u017Cacki"
-  itemDescription: "Krzy\u017Cuje drogi."
+  itemDescription: "Krzy\u017Cuje drogi. U\u017Cywany z dziada na pradziada."
   itemType: 1

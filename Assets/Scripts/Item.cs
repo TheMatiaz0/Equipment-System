@@ -14,7 +14,7 @@ public abstract class Item
 
 	public void Throw()
 	{
-		InventoryManager.Current.RemoveItem(this);
+		InventoryManager.RemoveItem(this);
 	}
 
 	public abstract void Usage();

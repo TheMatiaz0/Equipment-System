@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class SceneControlsManager : MonoBehaviour
 {
+	[SerializeField]
+	private GameObject inventoryUI = null;
+
 	protected void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Tab))
 		{
-			Debug.Log($"W twoim ekwipunku znajduj¹ siê {InventoryManager.Current.ToString()}...");
-		}
-
-		if (Input.GetKeyDown(KeyCode.G))
-		{
-			InventoryManager.Current.PickedItems[0].Usage();
+			inventoryUI.SetActive(!inventoryUI.activeSelf);	
+			// Debug.Log($"W twoim ekwipunku znajduj¹ siê {InventoryManager.Current.ToString()}...");
 		}
 	}
 }

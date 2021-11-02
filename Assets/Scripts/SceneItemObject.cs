@@ -10,8 +10,16 @@ public class SceneItemObject : MonoBehaviour
 
 	private void OnMouseDown()
 	{
-		Debug.Log($"Podniesiono przedmiot o nazwie {itemData.ItemName}!");
-		InventoryManager.Current.AddItem(itemData.GetItem());
-		Destroy(this.gameObject);
+		if (InventoryManager.TryAddItem(itemData.GetItem()))
+		{
+			Debug.Log($"Podniesiono przedmiot o nazwie {itemData.ItemName}!");
+			Destroy(this.gameObject);
+		}
+
+		else
+		{
+			Debug.Log($"Za du¿o przedmiotów w ekwipunku!");
+		}
+
 	}
 }
