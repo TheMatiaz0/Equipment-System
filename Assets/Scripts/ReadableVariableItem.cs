@@ -12,6 +12,5 @@ public class ReadableVariableItem : VariableItem
 	public override void Usage()
 	{
 		Debug.Log($"Przeczytano przedmiot o nazwie {ItemName} (oto jego zawartoœæ: {ItemVariable})");
-		InventoryManager.RemoveItem(this, 1);
 	}
 }

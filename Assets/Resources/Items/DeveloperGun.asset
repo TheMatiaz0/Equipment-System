@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f40e42da57d2c3e48ae6889b489a9ee5, type: 3}
-  m_Name: Hat
+  m_Name: DeveloperGun
   m_EditorClassIdentifier: 
-  itemName: Kapelusz
-  itemDescription: "Przykrywa \u0142ysink\u0119.a"
-  itemType: 3
+  itemName: "Bro\u0144 developera"
+  itemDescription: Nie ma nic lepszego.
+  itemType: 2

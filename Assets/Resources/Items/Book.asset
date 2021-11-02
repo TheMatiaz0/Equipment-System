@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f40e42da57d2c3e48ae6889b489a9ee5, type: 3}
-  m_Name: Hat
+  m_Name: Book
   m_EditorClassIdentifier: 
-  itemName: Kapelusz
-  itemDescription: "Przykrywa \u0142ysink\u0119.a"
-  itemType: 3
+  itemName: "Ksi\u0105\u017Cka"
+  itemDescription: "Co w niej mo\u017Ce by\u0107?"
+  itemType: 4

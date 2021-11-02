@@ -11,6 +11,11 @@ public class SceneItemObject : MonoBehaviour
 
 	private void OnMouseDown()
 	{
+		if (SceneControlsManager.Current.IsInventoryOpen)
+		{
+			return;
+		}
+
 		if (InventoryManager.TryAddItem(GetItem(), 1))
 		{
 			Debug.Log($"Podniesiono przedmiot o nazwie {itemData.Type.ItemName}!");

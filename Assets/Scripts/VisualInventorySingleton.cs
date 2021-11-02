@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class VisualInventorySingleton : MonoBehaviour
 {
-	public static VisualInventorySingleton Current { get; private set; } = null;
-
 	[SerializeField]
 	private VisualItemSlot itemSlotPrefab = null;
 
@@ -22,6 +20,8 @@ public class VisualInventorySingleton : MonoBehaviour
 
 	[SerializeField]
 	private Button throwBtn = null;
+
+	public static VisualInventorySingleton Current { get; private set; } = null;
 
 	protected void Awake()
 	{
