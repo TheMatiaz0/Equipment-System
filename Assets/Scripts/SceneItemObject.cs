@@ -11,7 +11,7 @@ public class SceneItemObject : MonoBehaviour
 
 	private void OnMouseDown()
 	{
-		if (SceneControlsManager.Current.IsInventoryOpen)
+		if (SceneControlsSingleton.Current.IsInventoryOpen)
 		{
 			return;
 		}

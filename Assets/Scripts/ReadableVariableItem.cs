@@ -11,6 +11,6 @@ public class ReadableVariableItem : VariableItem
 
 	public override void Usage()
 	{
-		Debug.Log($"Przeczytano przedmiot o nazwie {ItemName} (oto jego zawartoœæ: {ItemVariable})");
+		Debug.Log($"Przeczytano przedmiot o nazwie {ItemName} (oto jego zawartoœæ: \"{ItemVariable}\")");
 	}
 }
