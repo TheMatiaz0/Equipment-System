@@ -19,7 +19,7 @@ public static class InventoryManager
 		if (PickedItems.Exists(itemRecord => itemRecord.PickedItem.ItemName == item.ItemName))
 		{
 			// get this item and add to its record quantity
-			ItemRecord itemRecord = PickedItems.First(itemRecord => (itemRecord.PickedItem.GetType() == item.GetType()));
+			ItemRecord itemRecord = PickedItems.First(itemRecord => (itemRecord.PickedItem.ItemName == item.ItemName));
 			itemRecord.AddToQuantity(quantity);
 		}
 
