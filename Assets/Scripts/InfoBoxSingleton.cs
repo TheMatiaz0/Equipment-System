@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InfoBoxObject : MonoBehaviour
+public class InfoBoxSingleton : MonoBehaviour
 {
-	public static InfoBoxObject Current { get; private set; } = null;
+	public static InfoBoxSingleton Current { get; private set; } = null;
 
 	protected void Awake()
 	{

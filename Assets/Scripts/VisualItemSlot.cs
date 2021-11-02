@@ -1,28 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class VisualItemSlot : MonoBehaviour, IPointerEnterHandler
+public class VisualItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
     [SerializeField]
     private GameObject itemImg = null;
 
-	private Item holdingItem = null;
+	public Item HoldingItem { get; private set; } = null;
 
 	public void Setup(Item item)
 	{
-		holdingItem = item;
+		HoldingItem = item;
 		itemImg.SetActive(item != null);
 	}
 
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		if (holdingItem == null)
+		if (HoldingItem == null)
 		{
 			return;
 		}
 
-		InfoBoxObject.Current.Setup(holdingItem.ItemName, holdingItem.ItemDescription);
+		InfoBoxSingleton.Current.Setup(HoldingItem.ItemName, HoldingItem.ItemDescription);
+	}
+
+	public void OnPointerClick(PointerEventData eventData)
+	{
+		if (HoldingItem == null)
+		{
+			return;
+		}
+
+		VisualInventorySingleton.Current.SelectSlot(this);
 	}
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -6,6 +7,8 @@ using UnityEngine;
 public static class InventoryManager
 {
 	public const int MaxItemsQuantity = 6;
+
+	public static event Action OnInventoryChange = delegate { };
 
 	public static List<Item> PickedItems { get; private set; } = new List<Item>();
 	
@@ -17,12 +20,14 @@ public static class InventoryManager
 		}
 
 		PickedItems.Add(item);
+		OnInventoryChange.Invoke();
 		return true;
 	}
 	
 	public static void RemoveItem(Item item)
 	{
 		PickedItems.Remove(item);
+		OnInventoryChange.Invoke();
 	}
 
 
