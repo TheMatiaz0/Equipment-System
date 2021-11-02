@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class WeaponVariableItem : VariableItem<float>
 {
-	public WeaponVariableItem(string itemName, string itemDescription, float itemDmg) : base(itemName: itemName, itemDescription: itemDescription, itemVariable: itemDmg)
+	public WeaponVariableItem(string itemName, string itemDescription, float itemDmg) : 
+		base(itemName: itemName, itemDescription: itemDescription, itemVariable: itemDmg)
 	{
 	}
 

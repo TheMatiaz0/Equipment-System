@@ -27,6 +27,7 @@ public class ItemData : ScriptableObject
 
 	public string ItemName => itemName;
 	public string ItemDescription => itemDescription;
+	public ItemType ItemType => itemType;
 
 
 	public Item GetItem()

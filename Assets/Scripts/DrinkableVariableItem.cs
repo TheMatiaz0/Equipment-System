@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DrinkableVariableItem : VariableItem<int>
 {
-	public DrinkableVariableItem(string itemName, string itemDescription, int itemHpRegain) : base(itemName: itemName, itemDescription: itemDescription, itemVariable: itemHpRegain)
+	public DrinkableVariableItem(string itemName, string itemDescription, int itemHpRegain) 
+		: base(itemName: itemName, itemDescription: itemDescription, itemVariable: itemHpRegain)
 	{
 	}
 
