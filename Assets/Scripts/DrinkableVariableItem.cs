@@ -11,6 +11,6 @@ public class DrinkableVariableItem : VariableItem<int>
 	public override void Usage()
 	{
 		Debug.Log($"Wypito przedmiot o nazwie {ItemName} (dodano {ItemVariable} HP)");
-		InventoryManager.RemoveItem(this);
+		InventoryManager.RemoveItem(this, 1);
 	}
 }

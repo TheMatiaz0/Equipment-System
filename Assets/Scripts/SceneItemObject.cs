@@ -10,7 +10,7 @@ public class SceneItemObject : MonoBehaviour
 
 	private void OnMouseDown()
 	{
-		if (InventoryManager.TryAddItem(itemData.GetItem()))
+		if (InventoryManager.TryAddItem(itemData.GetItem(), 1))
 		{
 			Debug.Log($"Podniesiono przedmiot o nazwie {itemData.ItemName}!");
 			Destroy(this.gameObject);

@@ -55,19 +55,17 @@ public class VisualInventorySingleton : MonoBehaviour
 		InfoBoxSingleton.Current.Setup(null, null);
 		for (int i = 0; i < InventoryManager.MaxItemsQuantity; i++)
 		{
-			Item inventoryItem;
+			ItemRecord inventoryItem;
+			VisualItemSlot visualSlot = visualSlots[i];
 			if (i >= InventoryManager.PickedItems.Count)
 			{
-				inventoryItem = null;
+				visualSlot.Setup(null, 0);
 			}
 			else
 			{
 				inventoryItem = InventoryManager.PickedItems[i];
+				visualSlot.Setup(inventoryItem.PickedItem, inventoryItem.Quantity);
 			}
-
-			VisualItemSlot visualSlot = visualSlots[i];
-
-			visualSlot.Setup(inventoryItem);
 		}
 	}
 

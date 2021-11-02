@@ -342,7 +342,6 @@ MonoBehaviour:
   slotParent: {fileID: 1686717494}
   usageBtn: {fileID: 1302814607}
   throwBtn: {fileID: 366750007}
-  btnsObj: {fileID: 685448333}
 --- !u!1 &359946445
 GameObject:
   m_ObjectHideFlags: 0

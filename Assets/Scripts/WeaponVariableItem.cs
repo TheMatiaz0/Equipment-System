@@ -11,6 +11,6 @@ public class WeaponVariableItem : VariableItem<float>
 	public override void Usage()
 	{
 		Debug.Log($"Wyposa¿ono w broñ o nazwie {ItemName} (statystyki {ItemVariable} DMG)");
-		InventoryManager.RemoveItem(this);
+		InventoryManager.RemoveItem(this, 1);
 	}
 }
