@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item
+public abstract class Item
 {
 	public string ItemName { get; } 
 	public string ItemDescription { get; }
@@ -17,5 +17,5 @@ public class Item
 		InventoryManager.Current.RemoveItem(this);
 	}
 
-	// public abstract void Usage();
+	public abstract void Usage();
 }

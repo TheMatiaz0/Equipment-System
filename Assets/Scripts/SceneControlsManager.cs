@@ -10,5 +10,10 @@ public class SceneControlsManager : MonoBehaviour
 		{
 			Debug.Log($"W twoim ekwipunku znajduj¹ siê {InventoryManager.Current.ToString()}...");
 		}
+
+		if (Input.GetKeyDown(KeyCode.G))
+		{
+			InventoryManager.Current.PickedItems[0].Usage();
+		}
 	}
 }

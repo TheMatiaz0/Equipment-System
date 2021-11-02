@@ -1,16 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneItem : MonoBehaviour
+public class SceneItemObject : MonoBehaviour
 {
 	[SerializeField]
 	private ItemData itemData = null;
 
 	private void OnMouseDown()
 	{
-		Debug.Log($"Podnios³eœ item o nazwie {itemData.ItemName}!");
-		InventoryManager.Current.AddItem(new Item(itemData.ItemName, itemData.ItemDescription));
+		Debug.Log($"Podniesiono przedmiot o nazwie {itemData.ItemName}!");
+		InventoryManager.Current.AddItem(itemData.GetItem());
 		Destroy(this.gameObject);
 	}
 }

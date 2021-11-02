@@ -10,29 +10,29 @@ public class InventoryManager : MonoBehaviour
 	protected void Awake()
 	{
 		Current = this;
+		PickedItems = new List<Item>();
 	}
 
-	private List<Item> pickedItems = new List<Item>();
-	public IReadOnlyList<Item> PickedItems => pickedItems;
+	public List<Item> PickedItems { get; private set; }
 	
 	public void AddItem(Item item)
 	{
-		pickedItems.Add(item);
+		PickedItems.Add(item);
 	}
 	
 	public void RemoveItem(Item item)
 	{
-		pickedItems.Remove(item);
+		PickedItems.Remove(item);
 	}
 
 	public override string ToString()
 	{
 		StringBuilder stringBld = new StringBuilder();
 		string separator = "";
-		for (int i = 0; i < pickedItems.Count; i++)
+		for (int i = 0; i < PickedItems.Count; i++)
 		{
 			stringBld.Append(separator);
-			stringBld.Append(pickedItems[i].ItemName);
+			stringBld.Append(PickedItems[i].ItemName);
 			separator = ",";
 		}
 
