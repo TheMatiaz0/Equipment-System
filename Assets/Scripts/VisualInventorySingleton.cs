@@ -74,8 +74,15 @@ public class VisualInventorySingleton : MonoBehaviour
 		chosenSlot = slot;
 		if (chosenSlot != null)
 		{
-			usageBtn.onClick.AddListener(() => chosenSlot?.HoldingItem?.Usage());
-			throwBtn.onClick.AddListener(() => chosenSlot?.HoldingItem?.Throw());
+			if (usageBtn.onClick != null)
+			{
+				usageBtn.onClick.AddListener(() => { chosenSlot?.HoldingItem?.Usage(); SelectSlot(null); });
+			}
+
+			if (throwBtn.onClick != null)
+			{
+				throwBtn.onClick.AddListener(() => { chosenSlot?.HoldingItem?.Throw(); SelectSlot(null); });
+			}
 		}
 
 		usageBtn.gameObject.SetActive(chosenSlot != null);

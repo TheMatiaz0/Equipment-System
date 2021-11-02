@@ -25,42 +25,42 @@ public class SceneItemObject : MonoBehaviour
 		else
 		{
 			Debug.Log($"Za du¿o przedmiotów w ekwipunku!");
-
 		}
 
 	}
 
 	public Item GetItem()
 	{
-
-
 		switch (itemData.Type.ItemType)
 		{
 			case ItemType.Drinkable:
 				{
-					var item = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
-					return new DrinkableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, (int)Random.Range(item.x, item.y + 1));
+					Vector2 specificVariable = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
+					return new DrinkableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, 
+						(int)Random.Range(specificVariable.x, specificVariable.y + 1));
 				}
 
 
 			case ItemType.Readable:
 				{
-					var item = (string)((TextSpecificData)(itemData.Specific)).GetSpecificVariable();
-					return new ReadableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, item);
+					string specificVariable = (string)((TextSpecificData)(itemData.Specific)).GetSpecificVariable();
+					return new ReadableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, specificVariable);
 				}
 
 
 			case ItemType.Weapon:
 				{
-					var item  = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
-					return new WeaponVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, (int)Random.Range(item.x, item.y + 1));
+					Vector2 specificVariable = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
+					return new WeaponVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, 
+						(int)Random.Range(specificVariable.x, specificVariable.y + 1));
 				}
 
 
 			case ItemType.Wearable:
 				{
-					var item  = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
-					return new WearableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, (int)Random.Range(item.x, item.y + 1));
+					Vector2 specificVariable  = (Vector2)((NumericRangeSpecificData)(itemData.Specific)).GetSpecificVariable();
+					return new WearableVariableItem(itemData.Type.ItemName, itemData.Type.ItemDescription, 
+						(int)Random.Range(specificVariable.x, specificVariable.y + 1));
 				}
 		}
 

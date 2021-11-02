@@ -16,10 +16,10 @@ public class SpecificItem
 
 	public void RefreshType()
 	{
-		specific = Create(this.type.ItemType);
+		specific = CreateSpecificType(this.type.ItemType);
 	}
 
-	public ISpecificData Create(ItemType itemType)
+	public ISpecificData CreateSpecificType(ItemType itemType)
 	{
 		return itemType switch
 		{

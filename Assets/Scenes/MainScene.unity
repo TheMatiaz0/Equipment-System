@@ -825,25 +825,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData:
-    type: {fileID: 11400000, guid: 2a71d3d49017b7149a431d00a7dc1c9c, type: 2}
+    type: {fileID: 11400000, guid: fe0866607d570f24288947f677937ab7, type: 2}
     specific:
       id: 0
   references:
     version: 1
     00000000:
-      type: {class: TextSpecificData, ns: , asm: Assembly-CSharp}
+      type: {class: NumericRangeSpecificData, ns: , asm: Assembly-CSharp}
       data:
-        variable: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          vitae dui enim. Praesent vel nibh nec purus varius tincidunt a pretium
-          eros. Proin ultricies risus ac viverra convallis. Aenean eleifend magna
-          tortor, vel ullamcorper nunc tincidunt sit amet. Sed ut orci fringilla,
-          cursus ante eu, ullamcorper risus. Quisque gravida est ut leo vulputate,
-          vel bibendum enim gravida. Praesent vehicula eu ipsum ut commodo. Phasellus
-          aliquam vitae justo non egestas. Curabitur sit amet nunc justo. Aenean
-          massa nulla, imperdiet eget augue sed, dictum commodo nunc. Donec ac purus
-          vel augue varius commodo at vitae neque. Mauris dapibus dui ac metus molestie,
-          vitae venenatis nisl vulputate. Sed rutrum quam eu vestibulum luctus. Proin
-          sed enim mi.
+        variable: {x: 10, y: 50}
 --- !u!61 &499139457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1115,7 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData:
-    type: {fileID: 11400000, guid: fe0866607d570f24288947f677937ab7, type: 2}
+    type: {fileID: 11400000, guid: 30c173840d3f83c4ca75cd6b151c0c55, type: 2}
     specific:
       id: 0
   references:
@@ -1420,7 +1410,7 @@ MonoBehaviour:
     00000000:
       type: {class: TextSpecificData, ns: , asm: Assembly-CSharp}
       data:
-        variable: "To jest z pewno\u015Bci\u0105 ciekawy list."
+        variable: "W tym li\u015Bcie nie by\u0142o \u017Cadnej wiadomo\u015Bci."
 --- !u!61 &1116290400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2031,7 +2021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData:
-    type: {fileID: 11400000, guid: 30c173840d3f83c4ca75cd6b151c0c55, type: 2}
+    type: {fileID: 11400000, guid: e611693d6d3faab48804228a675ca58e, type: 2}
     specific:
       id: 0
   references:
