@@ -14,6 +14,7 @@ public abstract class Item
 
 	public void Throw()
 	{
+		Debug.Log($"Wyrzucono przedmiot o nazwie {ItemName}");
 		InventoryManager.RemoveItem(this, 1);
 	}
 
